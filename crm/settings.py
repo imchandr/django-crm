@@ -55,11 +55,7 @@ ROOT_URLCONF = 'crm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
         'DIRS': [ BASE_DIR/"templates" ],
-=======
-        'DIRS': [],
->>>>>>> 7a8eb54215a129d1a3ae69dd7272d4b4a2a94da9
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,11 +120,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
 AUTH_USER_MODEL = 'leads.User'
 
-=======
->>>>>>> 7a8eb54215a129d1a3ae69dd7272d4b4a2a94da9
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
