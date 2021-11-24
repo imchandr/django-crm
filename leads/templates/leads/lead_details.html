@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+   
+    <a href="{% url 'leads:lead-list' %}">go back to leads</a>
+    <hr>
+    
+    <h1>Details of the lead: "{{ lead_info.first_name }}"</h1>
+    
+    
+    <div class="leads">
+        <ul>
+            <li>First Name:     {{lead_info.first_name}}</li>
+            <li>Last Name:      {{lead_info.last_name}}</li>
+            <li>Age:            {{lead_info.age}}</li>
+            <li>Agent :            {{lead_info.agent}}</li>
+        </ul></div>
+        
+    <hr>
+    <a href="{% url 'leads:lead-update' lead_info.id %}"><button type="submit">Update</button></a>
+    <a href="{% url 'leads:lead-delete' lead_info.id %}"><button type="submit">Delete</button></a>
+    <hr>
+
+{% endblock content %}
