@@ -1,0 +1,18 @@
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<section class="text-gray-600 body-font">
+  <form method="POST" class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto ">
+    <div class="container px-5 py-24 mx-auto">
+    <h1 class="flex-grow sm:px-8 py-28 text-2xl font-medium title-font text-gray-900">Are you sure you want to Delete this?</h1>
+      <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+
+      {% csrf_token %}
+        <button type = "submit" class=" flex-shrink-0 text-white bg-red-500 border-0 py-2 px-8 my-2 mx-8 focus:outline-none hover:bg-red-600 rounded text-lg mt-10 sm:mt-0">Yes</button>
+        <button onclick="window.location.replace('leads:lead-list');"
+      type="Cancel"
+       class="flex-shrink-0 text-white bg-green-500 border-0 py-2 px-8 my-2 mx-8 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0">No
+        </button>
+      </div>
+    </div>
+  </form>
+</section>

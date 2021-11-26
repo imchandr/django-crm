@@ -1,3 +1,5 @@
+
+
 {% extends "base.html" %} {% block content %}
 
 <form form method="post">
@@ -23,7 +25,7 @@
     "
   >
     <h2 class="text-gray-900 text-lg mb-1 pb-6 font-medium title-font">
-      Update Lead Details..!
+      Create a new Lead
     </h2>
     <div class="relative mb-4">
       <label for="First-name" class="leading-7 text-sm text-gray-600"
@@ -155,7 +157,7 @@
         text-lg
       "
     >
-      Update
+      Add Lead
     </button>
 
     <button
@@ -185,3 +187,19 @@
 
 
 {% endblock content %}
+
+
+{% comment %} {% extends "base.html" %}
+
+{% block content %}
+
+    <a href="{% url 'leads:lead-list' %}"> Go back to leads</a>
+    <hr/>
+    <h1>create new lead</h1>
+    <form method="post">
+     {% csrf_token  %} 
+    {{ form.as_p}}
+    <button type = "Submit">Submit</button>
+    </form>
+
+{% endblock content %} {% endcomment %}
