@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% block content %}
+
+{% extends "base.html" %} 
+{% block content %}
+{% load static %}
 
 <section class="text-gray-600 body-font">
   <div
@@ -16,21 +19,18 @@
     <img
       class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
       alt="hero"
-      src="https://dummyimage.com/720x600"
+      src="{%static 'IMAGES/crm-images.png'%}"
     />
-    <div class="text-center lg:w-2/3 w-full">
+    <div class="text-center lg:w-2/5 w-full">
       <h1
-        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+        class=" title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
       >
-        A CRM tool for all your leads..!
+        Sper Charg Your Sales and Leads!
       </h1>
-      <p class="mb-8 leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-        temporibus magnam, reprehenderit iure nam maxime debitis autem. Repellat
-        quidem minus maxime voluptas iure fugiat iste, perspiciatis incidunt
-        quae excepturi voluptatum. 1
+      <p class="text-4x mb-8 leading-relaxed ">
+        Managing your sales team using a spread sheet? Use our CRM the ezziest one in the market to manage and run reports online from anywhere, anytime and accessible to your entire team online.
       </p>
-      <div class="flex justify-center">
+      {% comment %} <div class="flex justify-center">
         <button
           class="
             inline-flex
@@ -64,9 +64,16 @@
         >
           Button
         </button>
-      </div>
+      </div> {% endcomment %}
     </div>
   </div>
+
+  <div>
+  
+  </div>
 </section>
+
+
+
 
 {% endblock content %}

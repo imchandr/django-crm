@@ -84,12 +84,11 @@
         "
       />
     </div>
-
-    <div class="relative mb-4">
-      <label for="Age" class="leading-7 text-sm text-gray-600">Age</label>
+  <div class="relative mb-4">
+      <label for="Age" class="leading-7 text-sm text-gray-600">Email</label>
       <input
         value="{{lead_update.age}}"
-        type="number"
+        type="email"
         id="email"
         name="age"
         class="
@@ -112,16 +111,32 @@
     </div>
 
     <div class="relative mb-4">
-      <label for="Agent-email" class="leading-7 text-sm text-gray-600"
-        >Agent</label
-      >
-  {{ form.agent }}
-  <div class="relative mb-4">
-      <label for="Agent-email" class="leading-7 text-sm text-gray-600"
-        >Organization</label
-      >{{ form.organization }}
-
+      <label for="Age" class="leading-7 text-sm text-gray-600">User-Name</label>
+      <input
+        value="{{lead_update.age}}"
+        type="text"
+        id="email"
+        name="age"
+        class="
+          w-full
+          bg-white
+          rounded
+          border border-gray-300
+          focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200
+          text-base
+          outline-none
+          text-gray-700
+          py-1
+          px-3
+          leading-8
+          transition-colors
+          duration-200
+          ease-in-out
+        "
+      />
     </div>
+
+    
 
     <div>
       <button
@@ -140,7 +155,7 @@
         text-lg
       "
     >
-      Add Lead
+      Creaye-Agent
     </button>
 
     <button
@@ -150,7 +165,7 @@
         text-white
         bg-red-500
         border-0
-        mx-10
+        mx-6
         py-2
         px-6
         focus:outline-none
@@ -169,20 +184,14 @@
 
 
 
-{% endblock content %}
 
 
-{% comment %} {% extends "base.html" %}
-
-{% block content %}
-
-    <a href="{% url 'leads:lead-list' %}"> Go back to leads</a>
-    <hr/>
-    <h1>create new lead</h1>
+    
+    
     <form method="post">
      {% csrf_token  %} 
     {{ form.as_p}}
     <button type = "Submit">Submit</button>
     </form>
 
-{% endblock content %} {% endcomment %}
+{% endblock content %} 

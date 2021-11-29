@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'livereload',
     'django.contrib.staticfiles',
-    'leads'
+    'leads',
+    'agents',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'crm.urls'
@@ -119,6 +122,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR/"static"
+]
+STATIC_ROOT ="static_root"
+
 
 AUTH_USER_MODEL = 'leads.User'
 
@@ -126,3 +134,18 @@ AUTH_USER_MODEL = 'leads.User'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@sandboxc674beaa1ed34b0a9b7ea881ec9abf92.mailgun.org'
+EMAIL_HOST_PASSWORD = '9fb04642996cd1822ecda4e7020debc2-7dcc6512-9489bd1b'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'sarah_prkr@outlook.com'
+
+
+
+#Login redirecr url
+LOGIN_REDIRECT_URL = '/leads'
+LOGOUT_REDIRECT_URL = '/login'
+

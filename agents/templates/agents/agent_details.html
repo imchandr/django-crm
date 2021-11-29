@@ -4,40 +4,39 @@
 
     <section class="text-gray-700 body-font overflow-hidden">
     <div class="container px-4 py-12 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <div class="lg:w-1/2 w-full lg:pr-8 px-8 lg:py-6 mb-6 lg:mb-0">
+      <div class="lg:w-3/6 mx-auto flex flex-wrap">
+        <div class="lg:w-2/3 w-full lg:pr-8 px-8 lg:py-6 mb-6 lg:mb-0">
             
             
-            <div class="flex mb-4">
-                <a href="{% url 'leads:lead-details' lead_info.id %}" class="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">
-                    Lead Details
-                </a>
+            <div class="flex mb-4 flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">
+                {% comment %} <a href="#" class="">
+                    {% comment %} {% url 'leads:lead-details' lead_info.id %} 
+                </a> {% endcomment %}
+                    Agent Details
             </div>
             
             <div class="flex border-t border-gray-300 py-2">
                 <span class="text-gray-500">Name:</span>
-                <span class="ml-auto text-gray-900">{{ lead_info.first_name }}</span>
+                <span class="ml-auto text-gray-900">{{ agents.user.first_name }}</span>
             </div>
             <div class="flex border-t border-gray-300 py-2">
                 <span class="text-gray-500">Last-Name:</span>
-                <span class="ml-auto text-gray-900">{{ lead_info.last_name }} </span>
+                <span class="ml-auto text-gray-900">{{ agents.user.last_name }} </span>
             </div>
             <div class="flex border-t border-gray-300 py-2">
-                <span class="text-gray-500">Age:</span>
-                <span class="ml-auto text-gray-900">{{ lead_info.age }}</span>
+                <span class="text-gray-500">Email:</span>
+                <span class="ml-auto text-gray-900">{{ agents.user.email }}</span>
             </div>
             <div class="flex border-t border-b mb-6 border-gray-300 py-2">
-                <span class="text-gray-500">Agent:</span>
-                <span class="ml-auto text-gray-900">{{ lead_info.agent }}</span>
+                <span class="text-gray-500">User-name:</span>
+                <span class="ml-auto text-gray-900">{{agents.user.username }}</span>
             </div>
             
         <form action="">
-        {% if request.user.is_organisor  %}
-            <div class="h-48 flex flex-wrap content-start px-25 ">
-                <button formaction="{% url 'leads:lead-update' lead_info.id %}" class=" flex-shrink-0 text-white bg-purple-500 border-0 py-2 px-8 my-2 mx-8 focus:outline-none hover:bg-purple-600 rounded text-lg mt-10 sm:mt-0">Update</button>
-                <button formaction="{% url 'leads:lead-delete' lead_info.id %}" class=" flex-shrink-0 text-white bg-red-500 border-0 py-2 px-8 my-2 mx-2 focus:outline-none hover:bg-red-600 rounded text-lg mt-10 sm:mt-0">Delete</button>
-            </div>
-        {% endif %}
+        <div class="h-48 flex flex-wrap content-start px-25 ">
+            <button formaction="{% url 'agents:agent-update' agents.id %}" class=" flex-shrink-0 text-white bg-purple-500 border-0 py-2 px-8 my-2 mx-8 focus:outline-none hover:bg-purple-600 rounded text-lg mt-10 sm:mt-0">Update</button>
+            <button formaction="{% url 'agents:agent-delete' agents.id %}" class=" flex-shrink-0 text-white bg-red-500 border-0 py-2 px-8 my-2 mx-12 focus:outline-none hover:bg-red-600 rounded text-lg mt-10 sm:mt-0">Delete</button>
+        </div>
         </form>
 
     </div>

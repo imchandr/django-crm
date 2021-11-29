@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-livereload-server = "*"
 
 [dev-packages]
 autopep8 = "*"
