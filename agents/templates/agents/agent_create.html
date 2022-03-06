@@ -4,9 +4,10 @@
 
 <form form method="post">
   {% csrf_token %}
+  {% comment %} {{form.as_p}} {% endcomment %}
   
 
-
+ 
   <div
     class="
       lg:w-1/3
@@ -111,12 +112,12 @@
     </div>
 
     <div class="relative mb-4">
-      <label for="Age" class="leading-7 text-sm text-gray-600">User-Name</label>
+      <label for="id_username" class="leading-7 text-sm text-gray-600">User-Name</label>
       <input
-        value="{{lead_update.age}}"
+        value=""
         type="text"
-        id="email"
-        name="age"
+        id="id_username"
+        name="username"
         class="
           w-full
           bg-white
@@ -155,7 +156,7 @@
         text-lg
       "
     >
-      Creaye-Agent
+      Submit
     </button>
 
     <button
@@ -180,7 +181,7 @@
   </div>
 
   
-</form>
+</form> 
 
 
 
@@ -188,10 +189,10 @@
 
     
     
-    <form method="post">
+    {% comment %} <form method="post">
      {% csrf_token  %} 
     {{ form.as_p}}
     <button type = "Submit">Submit</button>
-    </form>
+    </form> {% endcomment %}
 
 {% endblock content %} 

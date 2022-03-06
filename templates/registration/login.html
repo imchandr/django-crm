@@ -1,19 +1,16 @@
  {% extends 'base.html' %}
-{% block content %}
+ {% block content %}
 
 
-<form action="" method="post">
+ <form action="" method="post">
 
 
-      {% csrf_token %}
-      
-    
+   {% csrf_token %}
 
-    <div
-      class="min-h-screen flex flex-col items-center justify-center  p-20"
-    >
-      <div
-        class="
+
+
+   <div class="min-h-screen flex flex-col items-center justify-center  p-20">
+     <div class="
           flex flex-col
           bg-white
           shadow-md
@@ -25,21 +22,16 @@
           rounded-3xl
           w-50
           max-w-md
-        "
-      >
-        <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
-          Login 
-        </div>
+        ">
+       <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+         Login
+       </div>
 
-        <div class="mt-10">
-            <div class="flex flex-col mb-5">
-              <label
-                for="id_username"
-                class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
-                >User-Name:</label>
-              <div class="relative">
-                <div
-                  class="
+       <div class="mt-10">
+         <div class="flex flex-col mb-5">
+           <label for="id_username" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">User-Name:</label>
+           <div class="relative">
+             <div class="
                     inline-flex
                     items-center
                     justify-center
@@ -49,17 +41,11 @@
                     h-full
                     w-10
                     text-gray-400
-                  "
-                >
-                  <i class="fas fa-user text-blue-500"></i>
-                </div>
+                  ">
+               <i class="fas fa-user text-blue-500"></i>
+             </div>
 
-                <input
-                  id="id_username"
-                  type="text"
-                  name="username"
-                  required id = "id_username"
-                  class="
+             <input id="id_username" type="text" name="username" required id="id_username" class="
                     text-sm
                     placeholder-gray-500
                     pl-10
@@ -69,21 +55,15 @@
                     w-full
                     py-2
                     focus:outline-none focus:border-blue-400
-                  "
-                  placeholder="Enter your User-name"
-                />
-              </div>
-            </div>
-            
-            
-            <div class="flex flex-col mb-6">
-              <label
-                for="id_password"
-                class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
-                >Password:</label>
-              <div class="relative">
-                <div
-                  class="
+                  " placeholder="Enter your User-name" />
+           </div>
+         </div>
+
+
+         <div class="flex flex-col mb-6">
+           <label for="id_password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Password:</label>
+           <div class="relative">
+             <div class="
                     inline-flex
                     items-center
                     justify-center
@@ -93,19 +73,13 @@
                     h-full
                     w-10
                     text-gray-400
-                  "
-                >
-                  <span>
-                    <i class="fas fa-lock text-blue-500"></i>
-                  </span>
-                </div>
+                  ">
+               <span>
+                 <i class="fas fa-lock text-blue-500"></i>
+               </span>
+             </div>
 
-                <input
-                  id="id_password"
-                  type="password"
-                  name="password"
-                  required id="id_password"
-                  class="
+             <input id="id_password" type="password" name="password" required id="id_password" class="
                     text-sm
                     placeholder-gray-500
                     pl-10
@@ -115,16 +89,12 @@
                     w-full
                     py-2
                     focus:outline-none focus:border-blue-400
-                  "
-                  placeholder="Enter your password"
-                />
-              </div>
-            </div>
+                  " placeholder="Enter your password" />
+           </div>
+         </div>
 
-            <div class="flex w-full">
-              <button
-                type="submit"
-                class="
+         <div class="flex w-full">
+           <button type="submit" class="
                   flex
                   mt-2
                   items-center
@@ -140,65 +110,49 @@
                   transition
                   duration-150
                   ease-in
-                "
-              >
-                <span class="mr-2 uppercase">Login</span>
-                <span>
-                  <svg
-                    class="h-6 w-6"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="flex justify-center items-center mt-6">
-        <a
-          href="#"
-          target="_blank"
-          class="
-            inline-flex
-            items-center
-            text-gray-700
-            font-medium
-            text-xs text-center
-          "
-        >
-          <span class="ml-2"
-            >Don't have an account?
-            <a
-              href="{% url 'signup' %}"
-              class="text-xs ml-2 text-blue-500 font-semibold"
-              >Signup here</a
-            ></span
-          >
-        </a>
-      </div>
-    </div>  
+                ">
+             <span class="mr-2 uppercase">Login</span>
+             <span>
+               <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                 <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+               </svg>
+             </span>
 
-  
-
-            
-
-        
-    
+           </button>
+         </div>
+         <div class="pt-4 pl-8">
+          <span class="  inline-flex
+          items-center
+          text-gray-700
+          font-medium
+          
+          text-xs text-centerml-2">Forgot  Password?
+           <a href={% url 'reset-password' %} class="text-xs ml-2 text-blue-500 font-semibold">Reset here</a></span>
+         </div>
+ </form>
+ </div>
+ </div>
+ <div class="flex justify-center items-center mt-6">
 
 
-</form>
+
+
+ </div>
+ </div>
 
 
 
 
 
-{% endblock content %} 
+
+
+
+
+ </form>
+
+
+
+
+
+ {% endblock content %}

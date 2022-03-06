@@ -50,6 +50,7 @@ class AgentCreateView(OrganisornAndLoginRequiredMixin,CreateView):
 
         Agent.objects.create(
             user=user,
+            organisation  = self.request.user.userprofile
             
         )
 
