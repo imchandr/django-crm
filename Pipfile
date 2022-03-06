@@ -4,8 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
+Django = "*"
 django-livereload-server = "*"
+gunicorn = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 autopep8 = "*"
